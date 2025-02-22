@@ -1,0 +1,44 @@
+<style>
+#facebook { 
+width: 200px!important; 
+height: 50px!important; 
+border-style: solid; 
+border-color: white;
+border-width: 1px;
+border-radius: 7px;
+line-height: 50px;
+display: table-cell;
+transition-timing-function: ease-in-out;
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+-ms-transition: all 0.5s;
+transition: all 0.5s;
+position: relative;
+display: inline-block;
+
+}
+
+img {
+    width: auto;
+    height: 50px;
+    display: none;
+  
+}
+
+#facebook:hover img { 
+display: block;
+  height: 50px;
+  width: auto;
+
+}
+
+#facebook:hover #text { 
+display: none;
+}
+
+#facebook img {
+    width: 100%;
+    height: auto;
+}
+</style>

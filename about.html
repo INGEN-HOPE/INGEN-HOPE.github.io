@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>INGEN HOPE | Research</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="description" content="Ingen-Hope, Research Group" />
+  <link rel='stylesheet' href="styles/style.css" />
+  <link rel="shortcut icon" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <link rel="icon" type="image/png" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png" sizes="16x16">
+  <link rel="manifest" href="#manifest.json">
+  <link rel="mask-icon" href="#safari-pinned-tab.svg" color="#e04646">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="https://ideal-helper.com/wp-content/uploads/2016/05/cropped-IH-Favicon.png">
+  <meta name="msapplication-config" content="#browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+   
+
+    .labretreat, .celebration, .workshop {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .labretreat h2, .celebration h2, .workshop h2 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .horizontal-scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-item {
+      flex: 0 0 auto;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      scroll-snap-align: start;
+    }
+
+    .scroll-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .aboutcontainer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    .aboutsection {
+      display: flex;
+      margin-bottom: 40px;
+        }
+    .aboutsection img {
+            width: 40%;
+            margin-right: 20px;
+        }
+    .section-content {
+            width: 60%;
+        }
+        .aboutsection h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .aboutsection p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .aboutsection a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .aboutsection a:hover {
+            text-decoration: underline;
+        }
+        .labretreat, .celebration {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+      <div class="toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="logo">
+        <div class="brand"><a href="./index.html"><strong>Ingen</strong> Hope</a></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class='active'>Research</a></li>
+          <li><a href="./publication.html">Publications</a></li>
+          <li><a href="./team.html">Team</a></li>
+          <li><a href="./project.html">Projects</a></li>
+          <li><a href="./media.html">Media</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="group">
+    <div class="subheader small">
+      <div class="container">
+        <h1>Research</h1>
+      </div>
+    </div>
+    <div class="aboutcontainer">
+      <!-- Single cell multi-omics based understanding of Host Response. -->
+      <div class="aboutsection">
+      <img src="./images/single-cell.png" alt="">
+      <div class="section-content">
+      <h2>Single cell multi-omics based understanding of Host Response</h2>
+      <p>The intricate biological processes underlying immune responses, particularly in relation to
+        cellular heterogeneity, have the potential to shape differential disease severities and clinical
+        outcomes. Our research focuses on elucidating the diversity of cell states, fates, and types
+        by utilizing clinical samples with varying severities and outcomes. Single-cell multi-omics,
+        including whole transcriptome analysis, antibody-seq (Abseq), and TCR/BCR profiling,
+        combined with machine learning-based analysis, aims to enhance our understanding of
+        cellular and immunological heterogeneity. We are also employing single-cell transcriptomics
+        for the discovery and functional understanding of intracellular microbes through their
+        &quot;genomic remnants&quot; within immune cells.<a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2022.1034159/full">Read more</a> </p>
+    </div>
+</div>
+      <!-- Pathogenic RNA Viral genome surveillance -->
+      <div class="aboutsection">
+          <img src="./images/Pathogen surveillance.png" alt="">
+          <div class="section-content">
+              <h2>Pathogenic RNA Viral genome surveillance in management of infectious disease</h2>
+              <p>The SARS-CoV-2 pandemic has underscored the critical importance of pandemic
+                preparedness and genomic surveillance in managing infectious diseases. This global crisis
+                has brought forth the strength of NGS based genomic surveillance and facilitated insights
+                into detection of new strains, novel mutations, pathogen genome architecture, and its
+                functional role in clinical outcome. By extending this genomic approach to the surveillance of
+                other neglected viral infections, such as Dengue, we aim to enhance DENV serotype
+                detection, understand epidemiological evolution and mutations associated with clinical
+                symptoms using longitudinal population-level screening using NGS-based whole genome
+                sequencing.<a href="https://doi.org/10.1080/00194506.2020.1845991">Read more</a></p>
+          </div>
+      </div>
+  
+      <!-- Coding and Non coding RNA -->
+      <div class="aboutsection">
+          <img src="./images/Coding and Non coding RNA in stress response during infectious disease.jpeg" alt="">
+          <div class="section-content">
+              <h2>Coding and Non coding RNA in stress response during infectious disease</h2>
+              <p>The intricate and dynamic interactions between hosts and pathogens critically influence the clinical outcomes of infectious diseases. This interaction is shaped by various factors, including human genetic variants, transcriptional responses encompassing both mRNA and non-coding RNA, and the genomic architecture of pathogens. Infectious diseases such as COVID-19 and Dengue not only impact mRNA but also regulate the expression of non-coding RNAs, thereby influencing disease severity. Integrating the multiple facets of host response, including human genetic diversity, genes, and non-coding RNAs, with clinical severity, we aim to understand factors that modulate infectious disease severity. <a href="https://doi.org/10.1093/bfgp/elab037">Read more</a></p>
+          </div>
+      </div>
+  
+    <!-- Alternative Splicing dynamics in Host and Pathogen -->
+    <div class="aboutsection">
+      <img src="./images/Alternative splicing.png" alt="">
+      <div class="section-content">
+          <h2>Alternative Splicing dynamics in Host and Pathogen</h2>
+          <p>Alternative splicing enhances mRNA diversity, crucially shaping host immune responses and influencing infection susceptibility and disease severity outcomes. Conversely, RNA viruses like SARS-CoV-2 and Dengue exploit host splicing mechanisms to regulate gene expression for viral replication and immune evasion. Our research focuses on exploring changes in splicing patterns and the dynamic utilization of transcripts across varying clinical severities. We have observed that viral infections lead to a reduction in protein-coding transcript diversity concurrent with increased transcription of non-functional genes. Consequently, our goal is to elucidate how these modifications influence clinical severity. Additionally, we seek to investigate how viral open reading frames (ORFs) optimize genome size to bolster strategies for virulence and survival <a href="https://www.life-science-alliance.org/content/7/8/e202402683#nogo">Read more</a></p>
+        </div>
+  </div>
+  <!-- Transcriptionally Active Microbes & Antimicrobial Resistance -->
+  <div class="aboutsection">
+    <img src="./images/Transcriptionally Active Microbes & Antimicrobial Resistance.PNG" alt="">
+    <div class="section-content">
+        <h2>Transcriptionally Active Microbes & Antimicrobial Resistance</h2>
+        <p>Antimicrobial resistance (AMR) poses a significant threat to global public health, as it renders standard treatments ineffective and leads to persistent infections. Genomics-driven investigations into AMR leverage advanced sequencing technologies to uncover the genetic basis of resistance, track its evolution and spread, and identify novel therapeutic targets. Our lab has shown that TAMs underlie disease severities. We want to understand further: i) Are differential expression of bacterial genes “encoded” in their sensitivity to AMR? ii) Does that impact disease severity & outcome? iii) Can that be used for antibiotic usage choice during treatment? <a href="https://www.sciencedirect.com/science/article/pii/S2589004223018564">Read more</a></p>
+      </div>
+</div>
+<!-- Viral epitranscriptomic dynamics during host-pathogen interactions -->
+<div class="aboutsection">
+  <img src="./images/Viral epitranscriptomic dynamics during host-pathogen interactions.jpg" alt="">
+  <div class="section-content">
+      <h2>Viral epitranscriptomic dynamics during host-pathogen interactions</h2>
+      <p>Viral epitranscriptomics during infection involves the dynamic alteration of RNA modifications, such as N6-methyladenosine (m6A), adenine and cytosine deamination, in the viral genome to regulate various stages of the viral life cycle, including replication, latency, and reactivation. These modifications are crucial for modulating viral gene expression, host-virus interactions, and evasion of host antiviral responses, emphasizing the need to investigate the intricate relationship between epitranscriptomic modifications, viral infections & disease severities. <a href="">Read more</a></p>
+    </div>
+</div>
+<!-- Infection-Induced 3D Genome Dynamics in Host and Pathogen -->
+<div class="aboutsection">
+  <img src="./images/3D genome dynamics.jpeg" alt="">
+  <div class="section-content">
+      <h2>Infection-Induced 3D Genome Dynamics in Host and Pathogen</h2>
+      <p>Mammalian chromosomes are highly compressed, creating 3D genomic architectures. During infections, significant alterations in host genome architecture occur, impacting gene expression & disease outcomes. Research has shown that SARS-CoV-2 infection leads to widespread restructuring of the 3D genome, including compartmental weakening, reduced intra-TAD contacts, and decreased euchromatin modification. This restructuring involves the depletion of the cohesin complex from intra-TAD regions, disrupting cohesin loop extrusion. Understanding these alterations in genome architecture is crucial for elucidating pathogenesis & developing potential therapeutic strategies.<a href="">Read more</a> </p>
+    </div>
+</div>
+
+
+</div>
+
+
+    <div class="labretreat">
+      <h2>Lab Retreat</h2>
+      <div class="horizontal-scroll-container">
+        <div class="scroll-item">
+          <a href="#img1"><img src="./images/Lab Retreat/3.jpg" class="img-fluid" alt=""></a>
+          <div id="img1" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/3.jpg" alt=""></a>
+          </div>
+        </div>
+        
+        <div class="scroll-item">
+          <a href="#img2"><img src="./images/Lab Retreat/56024f2c-cea2-441a-b60d-218e7dd72926.jpg" class="img-fluid" alt=""></a>
+          <div id="img2" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/56024f2c-cea2-441a-b60d-218e7dd72926.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img3"><img src="./images/Lab Retreat/8da631bc-d391-47f0-898a-82f1fd81c317.jpg" class="img-fluid" alt=""></a>
+          <div id="img3" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/8da631bc-d391-47f0-898a-82f1fd81c317.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img4"><img src="./images/Lab Retreat/96438198-20d5-4744-a4f8-c58d52b87b9e.jpg" class="img-fluid" alt=""></a>
+          <div id="img4" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/96438198-20d5-4744-a4f8-c58d52b87b9e.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img5"><img src="./images/Lab Retreat/fun-priyanka.jpg" class="img-fluid" alt=""></a>
+          <div id="img5" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun-priyanka.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img6"><img src="./images/Lab Retreat/fun.jpg" class="img-fluid" alt=""></a>
+          <div id="img6" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img7"><img src="./images/Lab Retreat/fun2.jpg" class="img-fluid" alt=""></a>
+          <div id="img7" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun2.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img8"><img src="./images/Lab Retreat/fun3.jpg" class="img-fluid" alt=""></a>
+          <div id="img8" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun3.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img9"><img src="./images/Lab Retreat/fun4.jpg" class="img-fluid" alt=""></a>
+          <div id="img9" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun4.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img10"><img src="./images/Lab Retreat/fun5.jpg" class="img-fluid" alt=""></a>
+          <div id="img10" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun5.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img11"><img src="./images/Lab Retreat/fun6.jpg" class="img-fluid" alt=""></a>
+          <div id="img11" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/fun6.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img12"><img src="./images/Lab Retreat/IMG-20240704-WA0046.jpg" class="img-fluid" alt=""></a>
+          <div id="img12" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/IMG-20240704-WA0046.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img13"><img src="./images/Lab Retreat/pri.jpg" class="img-fluid" alt=""></a>
+          <div id="img13" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/pri.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img14"><img src="./images/Lab Retreat/vns2.jpg" class="img-fluid" alt=""></a>
+          <div id="img14" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/vns2.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img15"><img src="./images/Lab Retreat/rani-trip.jpg" class="img-fluid" alt=""></a>
+          <div id="img15" class="lightbox">
+            <a href="#"><img src="./images/Lab Retreat/rani-trip.jpg" alt=""></a>
+          </div>
+        </div>
+       
+       
+        
+        
+
+
+        <!-- Add more images here as needed -->
+      </div>
+    </div>
+
+    <div class="celebration">
+      <h2>Celebrations</h2>
+      <div class="horizontal-scroll-container">
+        <div class="scroll-item">
+          <a href="#img16"><img src="./images/Celebrations/1000028222.jpg" class="img-fluid" alt=""></a>
+          <div id="img16" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/1000028222.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img17"><img src="./images/Celebrations/1000028224.jpg" class="img-fluid" alt=""></a>
+          <div id="img17" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/1000028224.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img18"><img src="./images/Celebrations/1000028230.jpg" class="img-fluid" alt=""></a>
+          <div id="img18" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/1000028230.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img19"><img src="./images/Celebrations/24ba59c5-5677-4c81-bab9-5b4433a23129.jpg" class="img-fluid" alt=""></a>
+          <div id="img19" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/24ba59c5-5677-4c81-bab9-5b4433a23129.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img20"><img src="./images/Celebrations/aaadd4c2-d585-4e04-9c51-ac317e2bb0b4.jpg" class="img-fluid" alt=""></a>
+          <div id="img20" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/aaadd4c2-d585-4e04-9c51-ac317e2bb0b4.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img21"><img src="./images/Celebrations/b771560e-a5f5-4d7d-a5e6-0ed6c4c65dbf.jpg" class="img-fluid" alt=""></a>
+          <div id="img21" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/b771560e-a5f5-4d7d-a5e6-0ed6c4c65dbf.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img22"><img src="./images/Celebrations/fun2.jpg" class="img-fluid" alt=""></a>
+          <div id="img22" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/fun2.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img23"><img src="./images/Celebrations/IMG_20231110_165141.jpg" class="img-fluid" alt=""></a>
+          <div id="img23" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/IMG_20231110_165141.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img24"><img src="./images/Celebrations/IMG_20231110_170945.jpg" class="img-fluid" alt=""></a>
+          <div id="img24" class="lightbox">
+            <a href="#"><img src="./images/Celebrations/IMG_20231110_170945.jpg" alt=""></a>
+          </div>
+        </div>
+        
+        
+        <!-- Add more images here as needed -->
+      </div>
+    </div>
+
+    <div class="celebration">
+      <h2>Meeting with Collaborators</h2>
+      <div class="horizontal-scroll-container">
+        <div class="scroll-item">
+          <a href="#img25"><img src="./images/Collaborators meeting/IMG-20240416-WA0003.jpg" class="img-fluid" alt=""></a>
+          <div id="img25" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/IMG-20240416-WA0003.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img26"><img src="./images/Collaborators meeting/IMG-20240416-WA0005.jpg" class="img-fluid" alt=""></a>
+          <div id="img26" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/IMG-20240416-WA0005.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img27"><img src="./images/Collaborators meeting/IMG-20240416-WA0009.jpg" class="img-fluid" alt=""></a>
+          <div id="img27" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/IMG-20240416-WA0009.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img28"><img src="./images/Collaborators meeting/talk.jpg" class="img-fluid" alt=""></a>
+          <div id="img28" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/talk.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img29"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.16.10 PM.jpeg" class="img-fluid" alt=""></a>
+          <div id="img29" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.16.10 PM.jpeg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img30"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.16.11 PM.jpeg" class="img-fluid" alt=""></a>
+          <div id="img30" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.16.11 PM.jpeg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img31"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.16.50 PM (1).jpeg" class="img-fluid" alt=""></a>
+          <div id="img31" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.16.50 PM (1).jpeg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img32"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.17.24 PM (2).jpeg" class="img-fluid" alt=""></a>
+          <div id="img32" class="lightbox">
+            <a href="#"><img src="./images/Collaborators meeting/WhatsApp Image 2024-07-03 at 6.17.24 PM (2).jpeg" alt=""></a>
+          </div>
+        </div>
+       
+    
+      
+     
+        
+        
+
+
+
+
+        </div>
+        
+         <!-- Add more images here as needed -->
+      </div>
+
+      <div class="celebration">
+        <h2>International Conferences</h2>
+        <div class="horizontal-scroll-container">
+          <div class="scroll-item">
+            <a href="#img33"><img src="./images/International Conferences/1.jpg" class="img-fluid" alt=""></a>
+            <div id="img33" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/1.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img34"><img src="./images/International Conferences/10.jpg" class="img-fluid" alt=""></a>
+            <div id="img34" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/10.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img35"><img src="./images/International Conferences/11.jpg" class="img-fluid" alt=""></a>
+            <div id="img35" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/11.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img36"><img src="./images/International Conferences/12.jpg" class="img-fluid" alt=""></a>
+            <div id="img36" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/12.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img37"><img src="./images/International Conferences/13.jpg" class="img-fluid" alt=""></a>
+            <div id="img37" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/13.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img38"><img src="./images/International Conferences/14.jpg" class="img-fluid" alt=""></a>
+            <div id="img38" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/14.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img39"><img src="./images/International Conferences/15.jpg" class="img-fluid" alt=""></a>
+            <div id="img39" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/15.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img40"><img src="./images/International Conferences/16.jpg" class="img-fluid" alt=""></a>
+            <div id="img40" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/16.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img41"><img src="./images/International Conferences/17.jpg" class="img-fluid" alt=""></a>
+            <div id="img41" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/17.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img42"><img src="./images/International Conferences/18.jpg" class="img-fluid" alt=""></a>
+            <div id="img42" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/18.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img43"><img src="./images/International Conferences/2.jpg" class="img-fluid" alt=""></a>
+            <div id="img43" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/2.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img44"><img src="./images/International Conferences/3.jpg" class="img-fluid" alt=""></a>
+            <div id="img44" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/3.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img45"><img src="./images/International Conferences/4.jpg" class="img-fluid" alt=""></a>
+            <div id="img45" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/4.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img46"><img src="./images/International Conferences/5.jpg" class="img-fluid" alt=""></a>
+            <div id="img46" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/5.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img47"><img src="./images/International Conferences/6.jpg" class="img-fluid" alt=""></a>
+            <div id="img47" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/6.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img48"><img src="./images/International Conferences/6.jpg" class="img-fluid" alt=""></a>
+            <div id="img48" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/6.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img49"><img src="./images/International Conferences/7.jpg" class="img-fluid" alt=""></a>
+            <div id="img49" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/7.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img50"><img src="./images/International Conferences/8.jpg" class="img-fluid" alt=""></a>
+            <div id="img50" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/8.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img51"><img src="./images/International Conferences/9.jpg" class="img-fluid" alt=""></a>
+            <div id="img51" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/9.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img52"><img src="./images/International Conferences/10.jpg" class="img-fluid" alt=""></a>
+            <div id="img52" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/10.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="scroll-item">
+            <a href="#img53"><img src="./images/International Conferences/IMG-20230922-WA0045.jpg" class="img-fluid" alt=""></a>
+            <div id="img53" class="lightbox">
+              <a href="#"><img src="./images/International Conferences/IMG-20230922-WA0045.jpg" alt=""></a>
+            </div>
+          </div>
+          
+        
+          
+          
+          </div>
+          </div>
+          <div class="celebration">
+            <h2>Outreach</h2>
+            <div class="horizontal-scroll-container">
+              <div class="scroll-item">
+                <a href="#img54"><img src="./images/Outreach/1000050798.jpg" class="img-fluid" alt=""></a>
+                <div id="img54" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000050798.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img55"><img src="./images/Outreach/1000051008.jpg" class="img-fluid" alt=""></a>
+                <div id="img55" class="lightbox">
+                  <a href="#"><img src="./images/Outreach//1000051008.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img56"><img src="./images/Outreach/1000051094.jpg" class="img-fluid" alt=""></a>
+                <div id="img56" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051094.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img57"><img src="./images/Outreach/1000051130.jpg" class="img-fluid" alt=""></a>
+                <div id="img57" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051130.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img58"><img src="./images/Outreach/1000051148.jpg" class="img-fluid" alt=""></a>
+                <div id="img58" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051148.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img59"><img src="./images/Outreach/1000051154.jpg" class="img-fluid" alt=""></a>
+                <div id="img59" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051154.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img60"><img src="./images/Outreach/1000051508.jpg" class="img-fluid" alt=""></a>
+                <div id="img60" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051508.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img61"><img src="./images/Outreach/1000051514.jpg" class="img-fluid" alt=""></a>
+                <div id="img61" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051514.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img62"><img src="./images/Outreach/1000051580.jpg" class="img-fluid" alt=""></a>
+                <div id="img62" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051580.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img63"><img src="./images/Outreach/1000051941.jpg" class="img-fluid" alt=""></a>
+                <div id="img63" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051941.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img64"><img src="./images/Outreach/1000051959.jpg" class="img-fluid" alt=""></a>
+                <div id="img64" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000051959.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img64"><img src="./images/Outreach/1000052025.jpg" class="img-fluid" alt=""></a>
+                <div id="img64" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000052025.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img65"><img src="./images/Outreach/1000052489.jpg" class="img-fluid" alt=""></a>
+                <div id="img65" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1000052489.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img66"><img src="./images/Outreach/1695300323616.jpg" class="img-fluid" alt=""></a>
+                <div id="img66" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1695300323616.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img67"><img src="./images/Outreach/1695300324232.jpg" class="img-fluid" alt=""></a>
+                <div id="img67" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/1695300324232.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img68"><img src="./images/Outreach/du2.jpg" class="img-fluid" alt=""></a>
+                <div id="img68" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/du2.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img69"><img src="./images/Outreach/IMG-20230923-WA0025.jpg" class="img-fluid" alt=""></a>
+                <div id="img69" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/IMG-20230923-WA0025.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img70"><img src="./images/Outreach/IMG-20240408-WA0003.jpg" class="img-fluid" alt=""></a>
+                <div id="img70" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/IMG-20240408-WA0003.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img71"><img src="./images/Outreach/IMG-20240408-WA0011.jpg" class="img-fluid" alt=""></a>
+                <div id="img71" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/IMG-20240408-WA0011.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <a href="#img72"><img src="./images/Outreach/IMG-20240408-WA0023.jpg" class="img-fluid" alt=""></a>
+                <div id="img72" class="lightbox">
+                  <a href="#"><img src="./images/Outreach/IMG-20240408-WA0023.jpg" alt=""></a>
+                </div>
+              </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="celebration">
+      <h2>Workshop</h2>
+      <div class="horizontal-scroll-container">
+        <div class="scroll-item">
+          <a href="#img73"><img src="./images/Workshops/1.JPG" class="img-fluid" alt=""></a>
+          <div id="img73" class="lightbox">
+            <a href="#"><img src="./images/Workshops/1.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img74"><img src="./images/Workshops/2.JPG" class="img-fluid" alt=""></a>
+          <div id="img74" class="lightbox">
+            <a href="#"><img src="./images/Workshops/2.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img75"><img src="./images/Workshops/3.JPG" class="img-fluid" alt=""></a>
+          <div id="img75" class="lightbox">
+            <a href="#"><img src="./images/Workshops/3.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img76"><img src="./images/Workshops/4.JPG" class="img-fluid" alt=""></a>
+          <div id="img76" class="lightbox">
+            <a href="#"><img src="./images/Workshops/4.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img77"><img src="./images/Workshops/5.JPG" class="img-fluid" alt=""></a>
+          <div id="img77" class="lightbox">
+            <a href="#"><img src="./images/Workshops/5.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img78"><img src="./images/Workshops/6.jpg" class="img-fluid" alt=""></a>
+          <div id="img78" class="lightbox">
+            <a href="#"><img src="./images/Workshops/6.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img79"><img src="./images/Workshops/7.JPG" class="img-fluid" alt=""></a>
+          <div id="img79" class="lightbox">
+            <a href="#"><img src="./images/Workshops/7.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img80"><img src="./images/Workshops/8.jpeg" class="img-fluid" alt=""></a>
+          <div id="img80" class="lightbox">
+            <a href="#"><img src="./images/Workshops/8.jpeg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img81"><img src="./images/Workshops/9.jpeg" class="img-fluid" alt=""></a>
+          <div id="img81" class="lightbox">
+            <a href="#"><img src="./images/Workshops/9.jpeg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img82"><img src="./images/Workshops/10.jpg" class="img-fluid" alt=""></a>
+          <div id="img82" class="lightbox">
+            <a href="#"><img src="./images/Workshops/10.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img83"><img src="./images/Workshops/11.jpg" class="img-fluid" alt=""></a>
+          <div id="img83" class="lightbox">
+            <a href="#"><img src="./images/Workshops/11.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img84"><img src="./images/Workshops/12.jpg" class="img-fluid" alt=""></a>
+          <div id="img84" class="lightbox">
+            <a href="#"><img src="./images/Workshops/12.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img85"><img src="./images/Workshops/13.jpg" class="img-fluid" alt=""></a>
+          <div id="img85" class="lightbox">
+            <a href="#"><img src="./images/Workshops/13.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img86"><img src="./images/Workshops/14.jpg" class="img-fluid" alt=""></a>
+          <div id="img86" class="lightbox">
+            <a href="#"><img src="./images/Workshops/14.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img87"><img src="./images/Workshops/15.jpg" class="img-fluid" alt=""></a>
+          <div id="img87" class="lightbox">
+            <a href="#"><img src="./images/Workshops/15.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img88"><img src="./images/Workshops/16.jpg" class="img-fluid" alt=""></a>
+          <div id="img88" class="lightbox">
+            <a href="#"><img src="./images/Workshops/16.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img89"><img src="./images/Workshops/17.JPG" class="img-fluid" alt=""></a>
+          <div id="img89" class="lightbox">
+            <a href="#"><img src="./images/Workshops/17.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img90"><img src="./images/Workshops/18.JPG" class="img-fluid" alt=""></a>
+          <div id="img90" class="lightbox">
+            <a href="#"><img src="./images/Workshops/18.JPG" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img91"><img src="./images/Workshops/19.jpg" class="img-fluid" alt=""></a>
+          <div id="img91" class="lightbox">
+            <a href="#"><img src="./images/Workshops/19.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img92"><img src="./images/Workshops/20.jpg" class="img-fluid" alt=""></a>
+          <div id="img92" class="lightbox">
+            <a href="#"><img src="./images/Workshops/20.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img93"><img src="./images/Workshops/du3.jpg" class="img-fluid" alt=""></a>
+          <div id="img93" class="lightbox">
+            <a href="#"><img src="./images/Workshops/du3.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="scroll-item">
+          <a href="#img94"><img src="./images/Workshops/du4.jpg" class="img-fluid" alt=""></a>
+          <div id="img94" class="lightbox">
+            <a href="#"><img src="./images/Workshops/du4.jpg" alt=""></a>
+          </div>
+        </div>
+      
+
+
+
+
+
+        </div>
+        
+  
+  </div>
+
+
+
+
+    
+
+  </section>
+  <footer>
+
+
+
+    <div class="container-fluid">
+
+
+        <div class="copyright">
+            <a href="#" class="windsock" target="_blank">
+                <p>PS : Dr Rajesh Pandey</p>
+            </a>
+
+            <span class="copyright">&copy; 2024 <a href="./index.html">INGEN-HOPE</a> Research Group
+
+                <p style="visibility: hidden;">icons</p>
+                <div class="row">
+                    <div class="col-md-12 center">
+
+                        <a href="https://scholar.google.co.in/citations?user=Dj14S78AAAAJ&hl=en" target="_blank"
+                            title="Google Scholar"><i style="font-size: 24px;"
+                                class="fas fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/profile/Rajesh-Pandey" target="_blank"
+                            title="Research Gate"><i style="font-size: 26px;" class="fab fa-researchgate"></i></a>
+                        <a href="https://www.linkedin.com/in/rajesh-pandey-01238656/?originalSubdomain=uk"
+                            target="_blank" title="Linkedin"><i style="font-size: 24px;"
+                                class="fab fa-linkedin"></i></a>
+
+
+                        <a href="https://twitter.com/RajeshPandeyLab" target="_blank" title="Twitter"><i
+                                style="font-size: 24px;" class="fab fa-twitter"></i></a>
+                        
+
+
+                    </div>
+                </div>
+            </span>
+
+
+
+        </div>
+
+    </div>
+
+</footer>
+<div class="visible-xs-block" id="mobile"></div>
+<div class="visible-sm-block" id="tablet"></div>
+
+<script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>
