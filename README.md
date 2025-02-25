@@ -13,7 +13,7 @@ For inquiries about content usage, please contact: **[rajesh.p@igib.res.in](mail
 ---
 
 ## Disclaimer  
-The views and opinions expressed on this website are solely those of the authors and contributors. The **CSIR-Institute of Genomics and Integrative Biology (CSIR-IGIB)** is **not responsible** for the accuracy, completeness, or reliability of any content presented here.  
+The content provided on this website is maintained by the INGEN-HOPE Lab. The **CSIR-Institute of Genomics and Integrative Biology (CSIR-IGIB)** is **not responsible** for the accuracy, completeness, or reliability of any content presented here.  
 
 By accessing this website, you acknowledge that **CSIR-IGIB holds no liability** for any direct, indirect, incidental, or consequential damages arising from the use of the information provided.  
 
