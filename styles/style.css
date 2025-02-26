@@ -702,13 +702,14 @@
  }
 
  .list-inline {
-   margin-left: -5px
+   margin-left: -5px;
+   color: black
  }
 
  .list-inline>li {
    padding-left: 5px;
    padding-right: 5px;
-   color: black;
+   color: black
  }
 
  dd {
