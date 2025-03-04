@@ -3251,7 +3251,8 @@ section.contactus .buttons .button {
  footer .copyright {
    font-size: .875em;
    padding: 25px 250px 55px;
-   text-align: left
+   text-align: left;
+   width: 100%
  }
 
  footer .copyright a {
