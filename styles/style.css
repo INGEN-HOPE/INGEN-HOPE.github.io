@@ -2230,6 +2230,7 @@
 
  body.folded footer .partners,
  body.folded section,
+ # 
  header nav {
    display: block !important
  }
