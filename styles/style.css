@@ -3305,7 +3305,7 @@ section.contactus .buttons .button {
      width: 200px
    }
  }
-
+/*
  @media only screen and (min-width:992px) {
    body {
      font-size: .875rem;
@@ -3532,7 +3532,7 @@ section.contactus .buttons .button {
   transition:all 5s ease-in;
   transition-delay: 5s;
 }
-
+*/
 .circular--landscape { 
 display: inline-block; 
 position: relative; 
