@@ -2231,7 +2231,7 @@
  body.folded footer .partners,
  body.folded section,
  header nav {
-   display: none
+   display: block !important
  }
 
  body .more:hover {
