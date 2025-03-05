@@ -3356,7 +3356,7 @@ section.contactus .buttons .button {
      
      left: 0;
      padding-top: 40px;
-     padding-bottom: 20px;
+     padding-bottom: 80px;
      position: fixed;
      top: 0;
      -webkit-transition: height .5s, padding .5s;
@@ -3375,6 +3375,8 @@ section.contactus .buttons .button {
    header .logo {
      font-size: 1.875em;
      left: 15px;
+     top: 1.5px;
+     bottom: 1.5px;
      margin: 0;
      position: absolute
    }
@@ -3384,11 +3386,12 @@ section.contactus .buttons .button {
      font-size: 1.375em;
      position: absolute;
      right: 15px;
-     top: 20px
+     top: 30px;
    }
 
    header nav ul {
-     padding: 0
+     padding: 0;
+     bottom: 5px
    }
 
    header nav ul li {
