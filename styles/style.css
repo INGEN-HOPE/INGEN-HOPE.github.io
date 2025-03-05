@@ -2267,8 +2267,12 @@
  }
 
  header .logo {
-   font-size: 1.25em;
-   margin: 40px 0 0 35px;
+   /*font-size: 1.25em;
+   margin: 40px 0 0 35px;*/
+   font-size: 1.875em;
+   left: 15px;
+   margin: 0;
+   position: absolute
  }
 
  header nav {
@@ -2570,7 +2574,6 @@
    margin: 50px auto;
    min-width: 200px;
    max-width: 300px;
-   min-height: 600px
  }
 
  section.group .content h1 {
@@ -3353,6 +3356,7 @@ section.contactus .buttons .button {
      
      left: 0;
      padding-top: 40px;
+     padding-bottom: 20px;
      position: fixed;
      top: 0;
      -webkit-transition: height .5s, padding .5s;
@@ -3380,7 +3384,7 @@ section.contactus .buttons .button {
      font-size: 1.375em;
      position: absolute;
      right: 15px;
-     top: 30px
+     top: 20px
    }
 
    header nav ul {
