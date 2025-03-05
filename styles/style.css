@@ -1,6 +1,7 @@
  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic);
 
 .column {
+  flex: 1 1 calc(33.33% - 15px);
   float: left;
   width: 50%;
   padding: 25px;
@@ -511,6 +512,7 @@
    line-height: 1.42857143
  }
  
+
  @media (min-width:768px) {
    .lead {
      font-size: 21px
@@ -875,7 +877,7 @@
  .container,
  .container-fluid {
    padding-left: 15px;
-   padding-right: 15px
+   padding-right: 15px;
  }
 
  .pre-scrollable {
@@ -889,6 +891,14 @@
    }
  }
 
+ /* SAMHITA ADDITION - CHECKING */
+ @media screen and (min-width: 600px) {
+  header .nav a {
+    float: none;
+    width: 100%;
+  }
+}
+
  @media (min-width:1200px) {
    .container {
      width: 1170px
@@ -896,6 +906,8 @@
  }
 
  .row {
+   flex-wrap: wrap;
+   justify-content: space-between; /* Ensures proper spacing */
    margin-left: -5px;
    margin-right: -5px
  }
@@ -2232,7 +2244,7 @@
  body.folded section,
  
  header nav {
-   display: none
+   display: block;
  }
 
  body .more:hover {
@@ -2247,6 +2259,7 @@
  header {
    background-color: #FFF;
    height: 100px
+   
  }
 
  header .container-fluid {
@@ -2255,7 +2268,7 @@
 
  header .logo {
    font-size: 1.25em;
-   margin: 40px 0 0 35px
+   margin: 40px 0 0 35px;
  }
 
  header nav {
@@ -2556,7 +2569,8 @@
    border-top: 2px dotted rgba(0, 0, 0, .3);
    margin: 50px auto;
    min-width: 200px;
-   max-width: 300px
+   max-width: 300px;
+   min-height: 600px
  }
 
  section.group .content h1 {
@@ -3284,7 +3298,8 @@ section.contactus .buttons .button {
    margin-right: 30px
  }
 
- @media only screen and (min-width:480px) {
+ 
+ @media only screen and (min-width:300px) { /* SAMHITA EDITED 480px original*/
    header .logo {
      font-size: 1.4375em
    }
@@ -3293,6 +3308,11 @@ section.contactus .buttons .button {
      height: 120px;
      width: 120px
    }
+
+   body { /* SAMHITA EDITED body added*/
+    font-size: .875rem;
+    padding-top: 150px;
+  }
  }
 
  @media only screen and (min-width:768px) {
@@ -3306,8 +3326,12 @@ section.contactus .buttons .button {
    }
  }
 
- @media only screen and (min-width:992px) {
-   body {
+ @media only screen and (min-width:300px) { /* SAMHITA EDITED from 992 */
+  body .column {
+    flex: 1 1 calc(50% - 15px); /* Two columns per row */
+  }  
+  
+  body {
      font-size: .875rem;
      padding-top: 150px
    }
@@ -3323,10 +3347,12 @@ section.contactus .buttons .button {
      visibility: hidden
    }
 
+
    header {
      height: 150px;
+     
      left: 0;
-     padding-top: 60px;
+     padding-top: 40px;
      position: fixed;
      top: 0;
      -webkit-transition: height .5s, padding .5s;
@@ -3353,7 +3379,8 @@ section.contactus .buttons .button {
      display: block;
      font-size: 1.375em;
      position: absolute;
-     right: 15px
+     right: 15px;
+     top: 30px
    }
 
    header nav ul {
